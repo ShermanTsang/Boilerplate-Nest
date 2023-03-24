@@ -11,7 +11,9 @@ datasource db {
 }
 
 generator nestgraphql {
-  provider = "node node_modules/prisma-nestjs-graphql"
-  output   = "../src/@generated"
-  reExport = Single
+  provider             = "node node_modules/prisma-nestjs-graphql"
+  output               = "../src/@generated"
+  noAtomicOperations   = true
+  combineScalarFilters = true
+  reExport             = Single
 }
